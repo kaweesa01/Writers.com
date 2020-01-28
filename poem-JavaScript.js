@@ -5,6 +5,7 @@ const prevBtn = document.querySelector('#prevBtn');
 
 let counter = 1;
 const size = images[0].clientWidth;
+
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 nextBtn.addEventListener('click', () => {
@@ -49,7 +50,7 @@ function handleCardEvent(event) {
     const card = button.closest('.card');
     const imgSrc = card.querySelector('img').src;
     const poemTitle = card.querySelector('.title').textContent
-    const poem = card.querySelector('.poem').textContent
+  //  const poem = card.querySelector('.poem').textContent
 
   //const poemVisibility = card.querySelector('.more-content');
 
@@ -60,10 +61,10 @@ function handleCardEvent(event) {
 
     const poems = card.querySelector('.poem')
 
- //backDropPoem.innerHTML = `${poems.innerHTML}`
+ backDropPoem.innerHTML = `${poems.innerHTML}`
 
     CardpoemHeader.textContent = `${poemTitle}`
-    backDropPoem.textContent = `${poem}`
+   // backDropPoem.textContent = `${poem}`
     backdropImageCard.innerHTML = `<img class="sun-set" src="${imgSrc}" alt="Sun Set"> `
     //backdrop.style. visibility = 'visible'
     backdrop.classList.add('open')
@@ -75,8 +76,5 @@ buttons.forEach(button => {
 })
 
 closeBtn.addEventListener('click',(event) => { 
-    const ev = event.currentTarget;
-  const remover = ev.closest('span');
-    console.log(remover)
     backdrop.classList.remove('open')
 })

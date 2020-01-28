@@ -66,12 +66,21 @@
 
     .card-container {
         display: grid;
-        grid-template-columns: 270px;
+        grid-template-columns: 270px  270px;
         grid-gap: 20px;
         justify-content: center;
     }
 }
 
+@media(max-width:589px) {
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 270px;
+        grid-gap: 20px;
+        justify-content: center;
+    }
+}
 .card {
     background-color: rgb(232, 226, 238);
     background-image: url('images/poemBg.jpg');
@@ -135,6 +144,7 @@
     border-radius: 5px;
     height: 140px;
     margin-bottom: 5px;
+    overflow: hidden;
     color: indianred;
 }
 
@@ -184,8 +194,14 @@
 
 .back-drop-nav-card {
     height: 60px;
+    grid-template-columns: 90px auto;
 }
-
+@media(max-width:315px) {
+    .back-drop-nav-card {
+        height: 60px;
+        grid-template-columns: 100px auto;
+    }
+}
 .card:hover {
     box-shadow: 2px 3px 3px 2px rgb(250, 157, 157);
 }
@@ -236,7 +252,11 @@
     font-family: Comfortaa;
     color: rgb(11, 7, 243);
 }
-
+@media(max-width:315px) {
+    .back-drop-follow {
+     font-size: 0.8rem;
+    }
+}
 @media(max-width:320px) {
     .back-drop-follow {
         width: 150px;
@@ -245,7 +265,10 @@
 
 }
 
-
+.back-drop-poem{
+    text-align: center;
+    font-family: inherit;
+}
 .poem-title-div {
     display: grid;
     grid-template-columns: 410px auto;
@@ -389,4 +412,7 @@
     border-radius: 8px;
     border: 5px solid rgb(223, 208, 197);
     border-top: none;
+}
+svg{
+    cursor: pointer;
 }
