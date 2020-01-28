@@ -65,7 +65,7 @@
  }
 
  .new-height {
-     height: 300px;
+     height: 320px;
      transition: all 2.5s;
      display: grid;
      grid-template-columns:50vw 50vw;
@@ -243,7 +243,7 @@
  }
 
  .see-work {
-     color: rgb(82, 82, 199);
+     color: rgba(82, 82, 199,0.2);
 
      font-size: 2.5rem;
  }
@@ -269,7 +269,7 @@
  }
 
  .read {
-     background-color: burlywood;
+     background-color: rgba(224, 186, 137,0.4);
      border-radius: 10px;
  }
 
@@ -381,6 +381,12 @@
    border: 5px solid rgb(223, 208, 197);
    border-top: none;
 }
+@media(max-width:800px) {
+    .footer-bg {
+        height: 420px;
+    }
+}
+
  @media(max-width:366px) {
      .footer-bg {
          height: 410px;
